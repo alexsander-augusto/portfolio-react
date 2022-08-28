@@ -1,0 +1,62 @@
+@use '../variables'
+@use '../mixins'
+
+#sidebar
+    background-color: variables.$bg-color
+    flex: 1 1 0
+    border-radius: variables.$container-border-radius
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-align: center
+    position: relative
+    padding: 3rem 2rem
+
+    img
+        max-width: 300px
+        border-radius: variables.$container-border-radius
+        position: absolute
+        top: -3.5rem
+
+    img:nth-child(1)
+        animation: up-down 1.5s infinite alternate
+
+    img:nth-child(2)
+        animation: up-down 1s infinite alternate
+
+    .title,
+    .title-name
+        color: variables.$text-color
+        margin-top: 12rem
+        padding: .8rem 1.2rem
+        text-align: left
+        font-family: "Roboto", sans-serif
+        font-size: 1.6rem  
+
+    .title-name
+        margin-top: -3rem
+        font-size: 2rem
+
+    .title-name:hover
+        color: #4f3ced
+        transition: .4s
+
+    .subtitle
+        color: variables.$text-color-secondary
+        background-color: variables.$bg-color-secondary
+        border-radius: variables.$card-border-radius
+        padding: .8rem 1.2rem
+
+        &:hover
+            background: #141414
+            transition: .4s
+
+    .btn
+        @include mixins.btn    
+
+@keyframes up-down 
+  from 
+    transform: translateY(0)
+  
+  to 
+    transform: translateY(8px)
