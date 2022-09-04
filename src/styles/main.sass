@@ -11,10 +11,13 @@ html
     background-repeat: no-repeat
     background-size: cover
     background-color: #1d1d1d
+    background-attachment: fixed
 
-body    
-    max-width: 1600px
-    margin: 0 auto
+    @media (min-width: 1920px)
+        background-size: contain
+
+body
+    height: 100vh
 
 a, svg
     transition: .4s

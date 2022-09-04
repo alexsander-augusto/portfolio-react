@@ -4,20 +4,19 @@ import Sidebar from "./components/Sidebar"
 import "./styles/components/app.sass"
 
 import background from "./img/background.png"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 
 function App() {
 
   return (
-    <div id="portfolio" 
-      // style={{
-      //   backgroundImage: `url(${background})`,
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center"
-      // }}
-    >
-      <Sidebar />
-      <MainContent />
+    <div id="portfolio">
+      <Header />
+      <div className="portfolio-content">
+        <Sidebar />
+        <MainContent />
+      </div>
+      <Footer />
     </div>
   )
 }
