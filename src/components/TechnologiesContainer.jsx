@@ -3,10 +3,25 @@ import {
   DiCss3,
   DiJsBadge,
   DiReact,
-  DiSass
+  DiSass,
+  DiPhotoshop,
+  DiIllustrator
 } from 'react-icons/di'
 
-import { SiTypescript } from 'react-icons/si'
+import { 
+  SiTypescript,
+  SiStyledcomponents,
+  SiVite
+} from 'react-icons/si'
+
+import {
+  FaShopify,
+  FaWordpress
+} from 'react-icons/fa'
+
+import {
+  TbBrandNextjs
+} from 'react-icons/tb'
 
 import '../styles/components/technologiescontainer.sass'
 
@@ -16,7 +31,14 @@ const technologies = [
   { id: "js", icon: <DiJsBadge />, url: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" },  
   { id: "typescript", icon: <SiTypescript />, url: "https://www.typescriptlang.org/docs/" },
   { id: "sass", icon: <DiSass />, url: "https://sass-lang.com/documentation/" },
-  { id: "react", icon: <DiReact />, url: "https://pt-br.reactjs.org/docs/getting-started.html" }
+  { id: "styled-components", icon: <SiStyledcomponents />, url: "https://styled-components.com/docs" },  
+  { id: "react", icon: <DiReact />, url: "https://pt-br.reactjs.org/docs/getting-started.html" },
+  { id: "next", icon: <TbBrandNextjs />, url: "https://nextjs.org/docs" },
+  { id: "vite", icon: <SiVite />, url: "https://vitejs.dev/" },  
+  { id: "photoshop", icon: <DiPhotoshop />, url: "https://helpx.adobe.com/support/photoshop.html" },
+  { id: "illustrator", icon: <DiIllustrator />, url: "https://helpx.adobe.com/br/illustrator/user-guide.html" },  
+  { id: "shopify", icon: <FaShopify />, url: "https://www.shopify.com.br/" },
+  { id: "wordpress", icon: <FaWordpress />, url: "https://developer.wordpress.com/docs/" },
 ]
 
 const TechnologiesContainer = () => {
