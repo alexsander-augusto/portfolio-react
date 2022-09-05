@@ -1,4 +1,5 @@
 import Footer from "./Footer"
+import Github from "./Github/Github"
 
 import '../styles/components/projects.sass'
 
@@ -7,7 +8,7 @@ const Projects = () => {
     <>
       <div className="projects-container">
         <div className="projects-content">
-          
+          <Github />
         </div>
       </div>
       <Footer />
