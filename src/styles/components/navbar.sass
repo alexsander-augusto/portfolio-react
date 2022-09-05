@@ -19,7 +19,7 @@
         position: absolute
         bottom: 0
         border-radius: 0.5rem 0.5rem 0 0
-        background: linear-gradient(90deg, rgb(85, 84, 255) 0%, rgb(25, 6, 167) 100%)
+        background: variables.$gradient
 
     ul
         @include mixins.center 
@@ -41,4 +41,7 @@
                 color: variables.$text-color
                 -webkit-transition: color .2s linear
                 -moz-transition: color .2s linear
-                transition: color .2s linear                
+                transition: color .2s linear
+
+                &:hover
+                    color: rgb(85, 84, 255)

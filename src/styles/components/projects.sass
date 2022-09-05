@@ -1,0 +1,14 @@
+@use '../variables'
+@use '../mixins'
+
+.projects-container
+    @include mixins.center
+    flex-wrap: wrap
+    padding: 3rem
+    gap: 3rem
+    
+    .projects-content
+        @include mixins.center
+        background-color: variables.$bg-color
+        border-radius: variables.$container-border-radius
+        padding: 3rem
