@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { format } from 'date-fns';
 
 import { GithubContainer, GithubContents, GithubContent, Title, Stars } from './styles'
 
@@ -39,20 +40,26 @@ const Github = () => {
       <GithubContainer>
         <GithubContents>
           {
-            projects.map((project) => 
-              projectsName.includes(project.name) && (
+            projects.map((project) => {
+              const month = format(new Date(project.created_at), 'LLL');
+              const year = format(new Date(project.created_at), 'Y');
+
+              return projectsName.includes(project.name) && (
                 <GithubContent key={project.id}>
                   <Title>
-                    <p>{project.created_at}</p>
+                    <time className="date">
+                      <p>{`${month}, ${year}`}</p>
+                    </time>
                     <a href={project.html_url} target="_blank" rel="noopener noreferrer">{project.name}</a>
-                    <p>tech</p>
+                    <p>{project.description}</p>
+                    <p>techs</p>
                   </Title>
                   <Stars>
                     <AiOutlineStar />{project.stargazers_count}
                   </Stars>
                 </GithubContent>
               )
-            )
+            })
           }
         </GithubContents>
         <p>{errorMsg}</p>

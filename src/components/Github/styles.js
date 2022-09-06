@@ -28,10 +28,18 @@ export const Title = styled.div`
         text-decoration: none;
         color: #fff;
         font-weight: 700;
+        font-size: 1.2rem;
 
         &:hover {
             color: rgb(85, 84, 255);
         }
+    }
+    
+    p {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #aaaaaa;
+        text-align: left;
     }
 `;
 
