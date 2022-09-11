@@ -2,7 +2,15 @@ import styled from 'styled-components'
 
 export const GithubContainer = styled.div`
     width: 50%;
-    padding: 0 0.5rem 0.7rem;    
+    padding: 0 0.5rem 0.7rem;  
+    
+    @media (max-width: 1200px) {
+        width: 70%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const GithubContents = styled.div`
@@ -47,4 +55,17 @@ export const Stars = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`;
+
+export const SeeMore = styled.div`
+    text-align: right;
+    
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            color: rgb(85, 84, 255);
+        }
+    }
 `;
